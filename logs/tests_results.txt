@@ -1,0 +1,54 @@
+test_crit (__main__.TestCharacter) ... ERROR
+test_init (__main__.TestCharacter) ... ok
+test_name (__main__.TestCharacter) ... FAIL
+test_weapon (__main__.TestCharacter) ... ERROR
+test_init (__main__.TestWeapon) ... ok
+test_name (__main__.TestWeapon) ... FAIL
+test_unarmed (__main__.TestWeapon) ... FAIL
+
+======================================================================
+ERROR: test_crit (__main__.TestCharacter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Majee\AppData\Local\Programs\Python\Python39\lib\unittest\mock.py", line 1337, in patched
+    return func(*newargs, **newkeywargs)
+  File "c:\Users\Majee\Documents\_Polytechnique\A2021\INF 1007 - INTRO A LA PROG\Exos cours\c03-ch11-1-exercices-MajeedAB\test_exercice.py", line 76, in test_crit
+    dmg, crit = self.foo.compute_damage(self.bar)
+TypeError: compute_damage() missing 1 required positional argument: 'crit_modifier'
+
+======================================================================
+ERROR: test_weapon (__main__.TestCharacter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Majee\Documents\_Polytechnique\A2021\INF 1007 - INTRO A LA PROG\Exos cours\c03-ch11-1-exercices-MajeedAB\test_exercice.py", line 56, in test_weapon
+    self.assertEqual(self.bar.weapon.name, "Unarmed")
+AttributeError: 'NoneType' object has no attribute 'name'
+
+======================================================================
+FAIL: test_name (__main__.TestCharacter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Majee\Documents\_Polytechnique\A2021\INF 1007 - INTRO A LA PROG\Exos cours\c03-ch11-1-exercices-MajeedAB\test_exercice.py", line 49, in test_name
+    self.foo.name = "henlo"
+AssertionError: AttributeError not raised
+
+======================================================================
+FAIL: test_name (__main__.TestWeapon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Majee\Documents\_Polytechnique\A2021\INF 1007 - INTRO A LA PROG\Exos cours\c03-ch11-1-exercices-MajeedAB\test_exercice.py", line 23, in test_name
+    self.w1.name = "henlo"
+AssertionError: AttributeError not raised
+
+======================================================================
+FAIL: test_unarmed (__main__.TestWeapon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "c:\Users\Majee\Documents\_Polytechnique\A2021\INF 1007 - INTRO A LA PROG\Exos cours\c03-ch11-1-exercices-MajeedAB\test_exercice.py", line 33, in test_unarmed
+    self.assertEqual(self.w4.min_level, 1)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=3, errors=2)

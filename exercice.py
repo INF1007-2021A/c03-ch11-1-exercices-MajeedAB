@@ -9,6 +9,7 @@ from inspect import *
 from game import *
 
 
+
 def main():
 	c1 = Character("Äpik", 200, 150, 70, 70)
 	c2 = Character("Gämmor", 250, 100, 120, 60)
